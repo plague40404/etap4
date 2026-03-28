@@ -1,0 +1,30 @@
+# Создание README
+echo "# Платформа управления мероприятиями ООО \"Новое дело\"" > README.md
+echo "## Описание проекта" >> README.md
+
+# Создание .gitignore
+cat > .gitignore << EOF
+.DS_Store
+node_modules/
+*.log
+.vscode/
+.idea/
+EOF
+
+# Создание директорий
+mkdir -p docs/stage-01-business-analysis
+mkdir -p diagrams
+
+# Просмотр состояния
+git status
+
+# Добавление файлов
+git add README.md .gitignore
+git add docs/
+git add diagrams/
+
+# Первый коммит
+git commit -m "init: создание структуры репозитория"
+
+# Отправка на GitHub
+git push origin main
